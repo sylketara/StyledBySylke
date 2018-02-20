@@ -34,8 +34,9 @@ app.get('/profile', styleController.getProfile)
 app.get('/results', styleController.getResults)
 app.post("/add-new-outfit", styleController.postNewOutfit)
 
+var port = process.env.PORT ||'4000';
+app.set('port', 'port');
 
-
-app.listen(3004, function() {
+app.listen(port, function() {
   console.log('server running');
 });
