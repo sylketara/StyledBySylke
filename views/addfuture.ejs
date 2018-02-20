@@ -1,0 +1,31 @@
+<%- include  header.ejs %>
+
+<main>
+  <h2>Ok! Let's Plan for your Future Event!</h2>
+
+  <form action="/today-outfit/submit" method="POST">
+    <label for="title">What type of event are you going to?</label>
+    <br>
+    <select>
+      <option value="Casual"> casual</option>
+      <option> value="corporate"
+    <input type="text" name="Type of event"></input>
+    <br>
+    <label for="time of event">What time will your event be?</label>
+    <br>
+    <input type="text" name="time"></input>
+    <br>
+    <label for="weather">What's the weather going to be like?</label>
+    <br>
+    <input type="text" name="weather"></input>
+    <br>
+    <label for="location">Can I have the location of your event?</label>
+    <br>
+    <input type="text" name="location"></input>
+    <br>
+    <button type="submit" name="submit">Save my Outfit!</button>
+  </form>
+
+</main>
+
+<%- include  footer.ejs %>

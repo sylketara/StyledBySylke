@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0px;
+  background-color:#F7C7DB;
+}
+
+.app-container{
+  /* The app can only be the height of the viewport */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Do NOT allow the app to scroll off the screen */
+  overflow: hidden;
+}
+
+main p{
+  margin-top: 10px;
+}
+
+form{
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main form button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+main{
+  /* Take up all free space on the screen between header and footer */
+  flex: 1 1 auto;
+  overflow-y: scroll;
+}
+
+h1{
+  font-family: sans-serif;
+  text-align: center;
+  color: #B37BA4;
+  font-size: 150%;
+  }
+h1{
+  margin: 25px auto;
+  border-radius: 300px;
+  box-shadow: 0px 5px 5px white;
+}
+h2{
+  font-family: sans-serif;
+  text-align: center;
+  color: #B37BA4;
+  font-size: 50%;
+
+}
+ul{
+  font-size: 150%;
+  padding: 15px;
+  color: #B37BA4;
+  text-align: center;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+li:hover{
+ color: #F79AD3;
+}
+
+h2{
+  font-size: 100%;
+}
+
+img{
+  width: 95%;
+  height: auto;
+  margin: 25px auto;
+  display: block;
+  }
+
+footer{
+  /* Give the footer a shadow too */
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2)
+}
+
+footer nav ul{
+  display: flex;
+/*    Put everything on one line  */
+  flex-direction: row;
+  /* Equally space everything  */
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer nav ul li{
+  /* Stop everything from hitting the edges of the footer   */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
