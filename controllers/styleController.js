@@ -20,15 +20,14 @@ var styleController = {
     })
   },
 
-  getAddfuture: function(req, res){
-    res.render('addfuture',{status: false});
+  match: function(req, res){
+    res.render('match',{status: false});
   },
 
   postNewOutfit: function(req, res){
 
     // Create a new object from the model...
     var newOutfit = new Outfit(req.body);
-    console.log(newOutfit)
     // ...and save it to the DB
     newOutfit.save(function(err, newOutfit){
       if(err){ return res.status(500).render('admin' ); };
@@ -37,12 +36,16 @@ var styleController = {
   },
 
   getResults: function(req, res){
-    Outfit.find(function(err, outfits){
-      if(err){ return res.status(500).send('Error!') };
-      res.render('results',{
-        outfits:outfits
-      });
-    })
+    console.log(req.body)
+    Outfit.findOne({
+      dressCode: req.body.dressCode,
+      time: req.body.time,
+      weather: req.body.weather,
+      location: req.body.location
+    }, function (err, result){
+      if(err){ return res.status(500).render('match' ); };
+      res.render('results',{result:result})
+    });
   }
 
 };

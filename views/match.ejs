@@ -1,0 +1,48 @@
+<%- include  header.ejs %>
+
+<main>
+  <h2>Ok! Let's Plan for your Future Event!</h2>
+
+  <form action="/match/submit" method="POST">
+    <label for="dressCode">What type of event are you going to?</label>
+    <br>
+    <select name="dressCode">
+      <option value="casual">Casual</option>
+      <option value="formal">Formal</option>
+    </select>
+
+    <br>
+    <label for="time">What time will your event be?</label>
+    <br>
+    <select name="time">
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+    </select>
+    <br>
+
+    <br>
+    <label for="weather">What's the weather going to be like?</label>
+    <br>
+    <select name="weather">
+      <option value="sunny">Sunny</option>
+      <option value="cloudy">Cloudy</option>
+      <option value="wet">Wet</option>
+      <option value="cold">Cold</option>
+    </select>
+    <br>
+
+    <label for="location">Can I have the location of your event?</label>
+    <br>
+    <select name="location">
+      <option value="inside">Inside event</option>
+      <option value="outside">Outside event</option>
+      <option value="both">Combination of both</option>
+    </select>
+    <br>
+    <button type="submit" name="submit">Find my Outfit!</button>
+  </form>
+
+</main>
+
+<%- include  footer.ejs %>

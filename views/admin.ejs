@@ -3,9 +3,10 @@
 <main>
   <h2>ADMIN FORM</h2>
 
-  <form action="/add-new-outfit" method="POST">
+  <form action="/add-new-outfit/submit" method="POST">
+
     <label for="description">Description</label>
-    <textarea name="description"></textarea>
+    <textarea name="description" required></textarea>
 
     <label for="dressCode">Dress Code</label>
     <select name="dressCode">
@@ -22,8 +23,8 @@
 
     <label for="weather">weather</label>
     <select name="weather">
-      <option value="warm">warm</option>
-      <option value="rainy">rainy</option>
+      <option value="sunny">sunny</option>
+      <option value="wet">wet</option>
       <option value="cloudy">cloudy</option>
       <option value="cold">cold</option>
     </select>
@@ -32,7 +33,7 @@
     <select name="location">
       <option value="inside">Inside Event</option>
       <option value="outside">Outside Event</option>
-      <option value="both">Combinationof both</option>
+      <option value="both">Combination of both</option>
     </select>
 
 

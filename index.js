@@ -22,17 +22,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', function(req, res){
   res.render("welcome")
 });
-
 app.get('/admin', function(req, res){
   res.render('admin')
 })
-
-app.get('/addfuture', styleController.getAddfuture)
-
+app.get('/match', styleController.match)
 app.get('/profile', styleController.getProfile)
-
-app.get('/results', styleController.getResults)
-app.post("/add-new-outfit", styleController.postNewOutfit)
+app.post('/match/submit', styleController.getResults)
+app.post("/add-new-outfit/submit", styleController.postNewOutfit)
 
 var port = process.env.PORT ||'4000';
 app.set('port', 'port');

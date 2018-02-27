@@ -3,14 +3,11 @@
   <h2>Based on your results you've matched with this outfit!</h2>
 
   <div class="slide">
-    <img src="<%= outfit.image %>" style="width:100%"/>
-    <h3><%= outfit.description %></h3>
+    <% if(result.img){ %>
+    <img src="<%= result.img %>" style="width:100%"/>
+    <%  } %>
+    <h3><%= result.description %></h3>
   </div>
-
-  <!-- <form action="/save-outfit" method="POST">
-  <br>
-  <button type="submit" name="submit">Save my Outfit!</button>
-  </form> -->
 
 </main>
 <%- include  footer.ejs %>
