@@ -30,7 +30,7 @@ app.get('/profile', styleController.getProfile)
 app.post('/match/submit', styleController.getResults)
 app.post("/add-new-outfit/submit", styleController.postNewOutfit)
 
-var port = process.env.PORT ||'4000';
+var port = process.env.PORT ||'4001';
 app.set('port', 'port');
 
 app.listen(port, function() {

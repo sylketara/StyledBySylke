@@ -1,4 +1,5 @@
 var Outfit = require("../models/outfitModel");
+const locationService= require('../services/locationService')
 
 var styleController = {
   getProfile: function(req, res){
@@ -44,7 +45,15 @@ var styleController = {
       location: req.body.location
     }, function (err, result){
       if(err){ return res.status(500).render('match' ); };
-      res.render('results',{result:result})
+      if(result<1){
+        locationService(function(err,response){
+          if(err){ return res.status(500).render('match' ); };
+          res.render('nomatch',{response:response});
+        })
+      } else{
+        res.render('results',{result:result})
+      }
+
     });
   }
 
